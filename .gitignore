@@ -1,0 +1,7 @@
+.next/
+.tmp/
+node_modules/
+out/
+*.log
+.env*
+!.env.example
