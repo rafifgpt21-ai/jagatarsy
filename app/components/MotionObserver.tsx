@@ -86,7 +86,7 @@ export function MotionObserver() {
               heading.setAttribute("aria-label", accessibleLabel);
               // Clip only during the reveal; completed text must retain its descenders.
               const releaseMasks = () => {
-                self.masks.forEach((mask) => { mask.style.overflow = "visible"; });
+                gsap.set(self.masks, { overflow: "visible" });
               };
               if (revealedHeadings.has(heading)) {
                 releaseMasks();
