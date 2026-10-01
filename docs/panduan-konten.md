@@ -124,3 +124,6 @@ Materi yang perlu disahkan: bahasa Arab dan pembacaan kitab; kajian Al-Qur’an 
 - `app/admissions/page.tsx`: tahapan, berkas, informasi administrasi, dan FAQ.
 - `app/components/SiteHeader.tsx` dan `SiteFooter.tsx`: istilah navigasi serta kontak.
 - `app/hero.css` dan `app/content.css`: penyesuaian proporsi judul dan tambahan teks dengan desain yang sudah ada.
+- `app/en/`: halaman berbahasa Inggris. Samakan pembaruan isi dengan halaman Indonesia yang berpadanan.
+- `app/data/education.en.ts` dan `app/data/stories.en.ts`: terjemahan data kelas peminatan, nilai pendidikan, serta artikel.
+- `app/lib/i18n.ts` dan `app/sitemap.ts`: padanan rute, fragmen halaman, dan alternate language untuk mesin pencari.

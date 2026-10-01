@@ -15,6 +15,11 @@
 @media (max-width: 700px) {
   .studio-header { height: 84px; padding-inline: 12px; }
   .studio-brand { gap: 8px; }
+  .navbar-brand-logo { width: 48px; height: 48px; }
+  .studio-brand .theme-brand-copy { font-size: 13px; }
+  .studio-header-actions { gap: 6px; }
+  .studio-header-apply { white-space: nowrap; padding-inline: 10px; }
+  .studio-menu-button { min-width: 58px; padding-inline: 8px; }
   .studio-menu-overlay { padding-top: 112px; }
   .studio-footer-brand { gap: 18px; }
   .footer-brand-link { flex-basis: 72px; }
@@ -23,5 +28,10 @@
 }
 
 @media (max-width: 380px) {
-  .studio-header-apply { display: none; }
+  .studio-header { padding-inline: 9px; }
+  .studio-brand { gap: 6px; }
+  .navbar-brand-logo { width: 40px; height: 40px; }
+  .studio-brand .theme-brand-copy { white-space: normal; font-size: 11px; line-height: 1.15; }
+  .studio-brand .theme-brand-copy > span { display: block; }
+  .studio-header-apply { padding-inline: 8px; }
 }

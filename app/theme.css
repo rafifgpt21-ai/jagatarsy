@@ -48,14 +48,16 @@ h1, h2, h3 { text-wrap: balance; }
 .theme-feature-icon { display: block; flex: 0 0 auto; width: 28px; height: 28px; padding: 0; border: 0; border-radius: 0; color: inherit; background: none; box-shadow: none; }
 
 /* A floating navigation capsule, with the brand colors kept visible. */
-.studio-header { top: 18px; left: 50%; width: min(1320px, calc(100% - 80px)); height: 76px; padding-inline: 22px; transform: translateX(-50%); border: 1px solid #fff; border-radius: 100px; color: var(--ink); background: rgba(255,254,250,.97); box-shadow: var(--shadow-card); }
+.studio-header { top: 18px; left: 50%; width: calc(100% - clamp(20px, 2.5vw, 48px)); height: 76px; padding-inline: 22px; transform: translateX(-50%); border: 1px solid #fff; border-radius: 100px; color: var(--ink); background: rgba(255,254,250,.97); box-shadow: var(--shadow-card); }
 .studio-brand { display: inline-flex; align-items: center; gap: 11px; font-size: 19px; letter-spacing: -.04em; color: var(--brand-navy); }
 .theme-brand-mark { display: inline-flex; align-items: center; justify-content: center; flex: 0 0 auto; width: 31px; height: 31px; padding: 0 !important; color: var(--brand-blue); border: 0; border-radius: 0; background: none; box-shadow: none; }
 .theme-brand-mark svg { width: 25px; height: 25px; }
 .theme-brand-copy > span { color: #bb276e; }
 .theme-brand-copy { position: relative; }
-.theme-brand-copy::after { content: ""; position: absolute; bottom: -6px; left: 0; width: 76%; height: 3px; border-radius: 100px; background: var(--brand-sequence); pointer-events: none; }
+.theme-brand-copy::after { content: ""; position: absolute; bottom: -6px; left: 0; width: 100%; height: 3px; border-radius: 100px; background: var(--brand-sequence); pointer-events: none; }
 .studio-header-actions { gap: 12px; }
+.studio-language-switch { display: inline-grid; min-width: 38px; height: 38px; place-items: center; padding-inline: 9px; border: 1px solid #c8d6df; border-radius: 100px; color: var(--brand-navy); background: #fff; font-size: 11px; font-weight: 700; letter-spacing: .04em; transition: background .2s, color .2s, border-color .2s; }
+.studio-language-switch:hover { border-color: var(--brand-navy); color: #fff; background: var(--brand-navy); }
 .studio-header-apply { display: inline-flex; align-items: center; gap: 12px; padding: 11px 18px; border-radius: 100px; color: var(--ink); background: #fff0b4; box-shadow: 0 4px 14px -7px #96741b30; }
 .studio-header-apply svg { width: 17px; height: 17px; }
 .studio-menu-button { display: inline-flex; align-items: center; justify-content: center; gap: 13px; color: white; background: var(--brand-navy); box-shadow: 0 4px 12px -5px #12345d30, 0 8px 20px -10px #12345d40, inset 0 1px 0 #ffffff40; }
@@ -430,11 +432,12 @@ main :is(.studio-work-card, .studio-journey-card, .studio-story-card, .stories-p
   .program-copy::before, .alumni-copy::before { width: 80px; height: 4px; margin-bottom: 20px; }
   :root { --radius-panel: 28px; --radius-card: 22px; }
   .studio-container, .wrap { width: calc(100% - 36px); }
-  .studio-header { top: 14px; width: calc(100% - 28px); height: 65px; padding-inline: 13px; }
+  .studio-header { top: 14px; width: calc(100% - 20px); height: 65px; padding-inline: 13px; }
   .studio-brand { gap: 8px; font-size: 14px; }
   .theme-brand-mark { width: 31px; height: 31px; }
   .theme-brand-mark svg { width: 20px; height: 20px; }
   .studio-header-actions { gap: 8px; }
+  .studio-language-switch { min-width: 34px; height: 34px; padding-inline: 7px; font-size: 10px; }
   .studio-header-apply { gap: 5px; padding: 9px 11px; font-size: 10px; }
   .studio-header-apply svg { width: 13px; height: 13px; }
   .studio-menu-button { gap: 7px; min-width: 71px; min-height: 36px; padding-inline: 11px; }

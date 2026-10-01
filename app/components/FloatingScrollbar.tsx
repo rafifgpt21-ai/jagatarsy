@@ -7,6 +7,7 @@ import { useEffect, useRef } from "react";
 export function FloatingScrollbar() {
   const lenis = useLenis();
   const pathname = usePathname();
+  const isEnglish = pathname.startsWith("/en");
   const trackRef = useRef<HTMLDivElement>(null);
   const thumbRef = useRef<HTMLDivElement>(null);
 
@@ -174,7 +175,7 @@ export function FloatingScrollbar() {
         className="floating-scrollbar-thumb"
         ref={thumbRef}
         role="scrollbar"
-        aria-label="Geser halaman"
+        aria-label={isEnglish ? "Scroll page" : "Geser halaman"}
         aria-controls="konten"
         aria-orientation="vertical"
         aria-valuemin={0}

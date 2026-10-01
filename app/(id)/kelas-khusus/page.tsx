@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
-import { PageIntro } from "../components/PageIntro";
-import { HomeArtwork } from "../components/HomeArtwork";
-import { SpecialTracks } from "../components/SpecialTracks";
-import { FeatureIcon } from "../components/ThemeIcon";
-import { specialTracks } from "../data/education";
+import { PageIntro } from "@/app/components/PageIntro";
+import { HomeArtwork } from "@/app/components/HomeArtwork";
+import { SpecialTracks } from "@/app/components/SpecialTracks";
+import { FeatureIcon } from "@/app/components/ThemeIcon";
+import { specialTracks } from "@/app/data/education";
 
 export const metadata: Metadata = {
   title: "Tiga Kelas Peminatan",

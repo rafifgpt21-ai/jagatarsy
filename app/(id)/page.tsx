@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
-import { educationPillars, alumniDestinations } from "./data/education";
-import { FeatureIcon } from "./components/ThemeIcon";
-import { HeroArtwork } from "./components/HeroArtwork";
-import { BrandLogo } from "./components/BrandLogo";
-import { HomeArtwork } from "./components/HomeArtwork";
-import { SpecialTracks } from "./components/SpecialTracks";
+import { educationPillars, alumniDestinations } from "@/app/data/education";
+import { FeatureIcon } from "@/app/components/ThemeIcon";
+import { HeroArtwork } from "@/app/components/HeroArtwork";
+import { BrandLogo } from "@/app/components/BrandLogo";
+import { HomeArtwork } from "@/app/components/HomeArtwork";
+import { SpecialTracks } from "@/app/components/SpecialTracks";
 
 const pillars = educationPillars;
 const destinations = alumniDestinations;

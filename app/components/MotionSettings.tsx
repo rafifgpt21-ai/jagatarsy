@@ -1,6 +1,7 @@
-"use client";
+﻿"use client";
 
 import { useSyncExternalStore } from "react";
+import type { Locale } from "@/app/lib/i18n";
 
 type MotionPreference = "system" | "full" | "reduced";
 const key = "jagat-arsy-motion";
@@ -33,7 +34,8 @@ export function useMotionPreference() {
   return useSyncExternalStore(subscribe, getPreference, () => "system" as MotionPreference);
 }
 
-export function MotionToggle() {
+export function MotionToggle({ locale = "id" }: { locale?: Locale }) {
+  const isEnglish = locale === "en";
   const preference = useMotionPreference();
   const systemReduced = useSyncExternalStore(subscribe, () => window.matchMedia(reducedQuery).matches, () => false);
   const reduced = preference === "reduced" || (preference === "system" && systemReduced);
@@ -45,9 +47,9 @@ export function MotionToggle() {
   };
 
   return (
-    <button className="motion-toggle" type="button" onClick={toggle} aria-pressed={!reduced}>
-      <span aria-hidden="true">{reduced ? "✳" : "◌"}</span>
-      {reduced ? "Aktifkan animasi" : "Kurangi animasi"}
+    <button className="motion-toggle" type="button" onClick={toggle} aria-pressed={!reduced} aria-label={isEnglish ? (reduced ? "Enable animations" : "Reduce motion") : (reduced ? "Aktifkan animasi" : "Kurangi animasi")}>
+      <span aria-hidden="true">{reduced ? "\u2733" : "\u25cc"}</span>
+      {isEnglish ? (reduced ? "Enable animations" : "Reduce motion") : (reduced ? "Aktifkan animasi" : "Kurangi animasi")}
     </button>
   );
 }

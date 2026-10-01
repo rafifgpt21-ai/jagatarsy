@@ -10,8 +10,6 @@ import "./home-art.css";
 import "./content.css";
 import "./special-tracks.css";
 import "./brand.css";
-import { SiteFooter } from "@/app/components/SiteFooter";
-import { SiteHeader } from "@/app/components/SiteHeader";
 import { AnalyticsBridge } from "@/app/components/AnalyticsBridge";
 import { MotionObserver } from "@/app/components/MotionObserver";
 import { SmoothScrolling } from "@/app/components/SmoothScrolling";
@@ -46,16 +44,11 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body className={`${anton.variable} ${interTight.variable}`}>
-        <a className="skip-link" href="#konten">
-          Lewati ke konten utama
-        </a>
         <SmoothScrolling>
-          <SiteHeader />
           <AnalyticsBridge />
           <MotionObserver />
           <FloatingScrollbar />
-          <main id="konten" tabIndex={-1}>{children}</main>
-          <SiteFooter />
+          {children}
         </SmoothScrolling>
       </body>
     </html>
