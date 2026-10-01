@@ -97,27 +97,6 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           <span className="theme-brand-copy">JAGAT <span>’ARSY</span></span>
         </Link>
         <div className="studio-header-actions">
-          <Link
-            className="studio-language-switch"
-            href={languageHref}
-            aria-label={isEnglish ? "Baca dalam Bahasa Indonesia" : "Read in English"}
-            title={isEnglish ? "Bahasa Indonesia" : "English"}
-            onClick={(event) => {
-              closeMenu();
-              if (window.location.search || window.location.hash) {
-                event.preventDefault();
-                const currentFragment = window.location.hash.slice(1);
-                let decodedFragment = currentFragment;
-                try { decodedFragment = decodeURIComponent(currentFragment); } catch { /* Keep the raw fragment if it is malformed. */ }
-                const fragment = currentFragment
-                  ? localizedFragment(pathname || (isEnglish ? "/en" : "/"), decodedFragment, isEnglish ? "id" : "en")
-                  : "";
-                router.push(`${languageHref}${window.location.search}${fragment ? `#${encodeURIComponent(fragment)}` : ""}`);
-              }
-            }}
-          >
-            {isEnglish ? "ID" : "EN"}
-          </Link>
           <Link className="studio-header-apply" href={isEnglish ? "/en/admissions" : "/admissions"} onClick={closeMenu} data-analytics-event="apply_now_click">
             {isEnglish ? "Apply now" : "Daftar sekarang"} <ThemeIcon name="arrow" />
           </Link>
@@ -162,6 +141,27 @@ export function SiteHeader({ locale }: { locale: Locale }) {
           ))}
         </nav>
         <div className="studio-overlay-bottom">
+          <Link
+            className="studio-overlay-language"
+            href={languageHref}
+            aria-label={isEnglish ? "Baca dalam Bahasa Indonesia" : "Read in English"}
+            title={isEnglish ? "Bahasa Indonesia" : "English"}
+            onClick={(event) => {
+              closeMenu();
+              if (window.location.search || window.location.hash) {
+                event.preventDefault();
+                const currentFragment = window.location.hash.slice(1);
+                let decodedFragment = currentFragment;
+                try { decodedFragment = decodeURIComponent(currentFragment); } catch { /* Keep the raw fragment if it is malformed. */ }
+                const fragment = currentFragment
+                  ? localizedFragment(pathname || (isEnglish ? "/en" : "/"), decodedFragment, isEnglish ? "id" : "en")
+                  : "";
+                router.push(`${languageHref}${window.location.search}${fragment ? `#${encodeURIComponent(fragment)}` : ""}`);
+              }
+            }}
+          >
+            {isEnglish ? "Bahasa Indonesia" : "English"}
+          </Link>
           <span>{isEnglish ? "World Civilisation Islamic Boarding School · BSD, South Tangerang" : "Pesantren Peradaban Dunia · BSD, Tangerang Selatan"}</span>
           <a href="https://wa.me/628111543738" target="_blank" rel="noreferrer" data-analytics-event="whatsapp_click">
             {isEnglish ? "Contact admissions ↗" : "Hubungi panitia PPDB ↗"}
