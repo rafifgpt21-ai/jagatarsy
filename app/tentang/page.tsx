@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import { PageIntro } from "@/app/components/PageIntro";
+import { BrandLogo } from "@/app/components/BrandLogo";
 
 export const metadata: Metadata = {
   title: "Tentang Pesantren",
@@ -15,6 +16,7 @@ export default function TentangPage() {
       <section className="about-feature section wrap" id="filosofi">
         <div className="about-image"><Image src="/images/school-mark.webp" alt="Area hijau dan gerbang di lingkungan Pesantren Jagat ‘Arsy" fill sizes="(max-width: 760px) 100vw, 48vw" /></div>
         <div className="about-copy">
+          <BrandLogo className="about-brand-logo" size={96} alt="" />
           <h2>Ilmu sebagai bekal.<br /><em>Adab sebagai tuntunan.</em></h2>
           <p>Nama “Peradaban Dunia” menyatakan sebuah harapan: santri dapat menggunakan ilmu dan kecakapannya untuk memberi manfaat bagi umat dan masyarakat.</p>
           <p>Visi pesantren menghubungkan kehidupan religius, cara berpikir ilmiah, jiwa wirausaha, wawasan internasional, dan kecintaan terhadap lingkungan. Nilai-nilai tersebut dipelajari melalui pendidikan di kelas sekaligus kebiasaan hidup bersama.</p>

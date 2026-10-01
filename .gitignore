@@ -3,6 +3,16 @@ next-env.d.ts
 .tmp/
 node_modules/
 out/
+build/
+dist/
+coverage/
+*.tsbuildinfo
 *.log
 .env*
 !.env.example
+.vercel/
+
+# Local design archives and generated deliverables; the deployed site uses public/.
+/design/
+/output/
+/tmp/

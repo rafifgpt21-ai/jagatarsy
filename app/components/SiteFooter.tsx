@@ -2,15 +2,21 @@ import Link from "next/link";
 import { MotionToggle } from "./MotionSettings";
 import { SmoothAnchor } from "./SmoothAnchor";
 import { ThemeIcon } from "./ThemeIcon";
+import { BrandLogo } from "./BrandLogo";
 
 export function SiteFooter() {
   return (
     <footer className="studio-footer">
       <div className="studio-container">
         <div className="studio-footer-top">
-          <div>
-            <p className="studio-footer-label">Pesantren Peradaban Dunia</p>
-            <p>Mendidik jiwa. Menajamkan nalar.<br />Menyiapkan masa depan.</p>
+          <div className="studio-footer-brand">
+            <Link href="/" className="footer-brand-link" aria-label="Jagat ‘Arsy, kembali ke beranda">
+              <BrandLogo tone="white" size={88} alt="" />
+            </Link>
+            <div>
+              <p className="studio-footer-label">Pesantren Peradaban Dunia</p>
+              <p>Mendidik jiwa. Menajamkan nalar.<br />Menyiapkan masa depan.</p>
+            </div>
           </div>
           <div className="studio-footer-links">
             <Link href="/tentang">Tentang</Link>

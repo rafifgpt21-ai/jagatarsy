@@ -3,6 +3,7 @@ import Link from "next/link";
 import { educationPillars, alumniDestinations } from "./data/education";
 import { FeatureIcon } from "./components/ThemeIcon";
 import { HeroArtwork } from "./components/HeroArtwork";
+import { BrandLogo } from "./components/BrandLogo";
 import { HomeArtwork } from "./components/HomeArtwork";
 import { SpecialTracks } from "./components/SpecialTracks";
 
@@ -210,7 +211,7 @@ export default function HomePage() {
         <div className="studio-container" data-reveal>
           <div className="home-cta-heading">
             <h2>Mari berkunjung<br />ke Jagat ‘Arsy.</h2>
-            <HomeArtwork kind="doorway" />
+            <BrandLogo tone="navy" className="home-cta-logo" size={300} alt="" />
           </div>
           <div className="studio-final-bottom">
             <p>Bapak dan Ibu dapat mengenal lingkungan pesantren bersama ananda, berbincang tentang pendidikan dan kehidupan asrama, serta menanyakan persiapan menjadi santri.</p>

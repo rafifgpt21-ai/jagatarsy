@@ -1,0 +1,27 @@
+.brand-logo { display: block; height: auto; flex-shrink: 0; object-fit: contain; }
+
+/* Give the complete symbol room to breathe inside the navigation pill. */
+.studio-header { height: 88px; }
+.studio-brand { gap: 12px; }
+.navbar-brand-logo { width: 64px; height: 64px; }
+.studio-menu-overlay { padding-top: 126px; }
+
+.studio-footer-brand { display: flex; align-items: flex-start; gap: 22px; }
+.footer-brand-link { display: block; flex: 0 0 88px; border-radius: 8px; }
+.footer-brand-link:focus-visible { outline: 2px solid #ffd12c; outline-offset: 8px; }
+.home-cta-logo { width: 100%; }
+.about-brand-logo { margin-bottom: 24px; }
+
+@media (max-width: 700px) {
+  .studio-header { height: 84px; padding-inline: 12px; }
+  .studio-brand { gap: 8px; }
+  .studio-menu-overlay { padding-top: 112px; }
+  .studio-footer-brand { gap: 18px; }
+  .footer-brand-link { flex-basis: 72px; }
+  .footer-brand-link .brand-logo { width: 72px; }
+  .home-cta-logo { width: 170px; justify-self: end; margin-right: 15px; }
+}
+
+@media (max-width: 380px) {
+  .studio-header-apply { display: none; }
+}

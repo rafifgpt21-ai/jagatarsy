@@ -9,6 +9,7 @@ import "./hero.css";
 import "./home-art.css";
 import "./content.css";
 import "./special-tracks.css";
+import "./brand.css";
 import { SiteFooter } from "@/app/components/SiteFooter";
 import { SiteHeader } from "@/app/components/SiteHeader";
 import { AnalyticsBridge } from "@/app/components/AnalyticsBridge";

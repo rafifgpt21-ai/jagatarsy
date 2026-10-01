@@ -5,6 +5,7 @@ import { useLenis } from "lenis/react";
 import type { CSSProperties } from "react";
 import { useEffect, useRef, useState } from "react";
 import { ThemeIcon } from "./ThemeIcon";
+import { BrandLogo } from "./BrandLogo";
 
 const navigation = [
   ["Beranda", "/"],
@@ -73,7 +74,7 @@ export function SiteHeader() {
     <>
       <header className={`studio-header${open ? " menu-open" : ""}`}>
         <Link className="studio-brand" href="/" onClick={closeMenu} aria-label="Jagat ‘Arsy, kembali ke beranda">
-          <span className="theme-brand-mark" aria-hidden="true"><ThemeIcon name="globe" /></span>
+          <BrandLogo tone={open ? "white" : "color"} className="navbar-brand-logo" size={64} alt="" eager />
           <span className="theme-brand-copy">JAGAT <span>‘ARSY</span></span>
         </Link>
         <div className="studio-header-actions">
