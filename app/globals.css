@@ -14,7 +14,8 @@
 }
 
 * { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 100px; }
+/* Inherited by all controls; custom active states and keyboard focus stay visible. */
+html { scroll-behavior: smooth; scroll-padding-top: 100px; -webkit-tap-highlight-color: transparent; }
 body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--sans); font-size: 15px; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
 button, summary { font: inherit; }
